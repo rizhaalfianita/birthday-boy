@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racist Boy | Birthday</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="relative isolate h-screen w-screen overflow-hidden px-6 pt-40 sm:p-6 lg:overflow-visible lg:px-6 lg:pt-40 md:pt-40"
+    >
+      <form class="max-w-xl mx-auto form-hidden">
+        <h1 id="heading" class="font-bold text-7xl text-gray-800 text-center">
+          Answer This<span class="text-blue-500">.</span>
+        </h1>
+        <div id="input-wrapper" class="mb-5 mt-9">
+          <input
+            type="text"
+            id="question-input"
+            class="bg-gray-100 text-gray-800 font-medium text-sm rounded-lg border-0 block w-full px-5 py-4 focus:ring-0 focus:outline-none placeholder:text-gray-500 placeholder:font-normal"
+            placeholder="Who is the racist boy?"
+            required
+          />
+        </div>
+        <div id="hint-item" class="flex">
+          <div class="box-content h-5 w-1 bg-blue-500 mr-3 my-1"></div>
+          <p id="hint-text" class="text-md font-medium text-gray-500">
+            Hint:
+            <span class="text-md font-bold text-gray-800">Rendra</span>
+          </p>
+        </div>
+        <div id="btn-wrapper" class="flex justify-end items-end mt-5">
+          <a
+            href=""
+            type="button"
+            id="btn-wush"
+            class="text-white text-md bg-gray-800 hover:bg-gray-900 shadow-md font-medium rounded-lg text-sm px-5 py-2 focus:outline-none"
+          >
+            Wush
+          </a>
+        </div>
+      </form>
+    </div>
+    <script>
+      const inputField = document.getElementById("question-input");
+      const hintItem = document.getElementById("hint-item");
+      const btnWush = document.getElementById("btn-wush");
+
+      function showHint() {
+        if (inputField.value.trim() !== "") {
+          hintItem.style.display = "flex";
+          const elements = hintItem.querySelectorAll(
+            ".box-content, #hint-text span"
+          );
+          elements.forEach((element, index) => {
+            setTimeout(() => {
+              element.style.opacity = "1";
+            }, index * 100);
+          });
+        } else {
+          hintItem.style.display = "none";
+          const elements = hintItem.querySelectorAll(
+            ".box-content, #hint-text span"
+          );
+          elements.forEach((element) => {
+            element.style.opacity = "0";
+          });
+        }
+      }
+
+      function checkValue() {
+        const inputValue = inputField.value.toLowerCase();
+        if (!inputValue.includes("rendra")) {
+          btnWush.classList.remove("bg-gray-800");
+          btnWush.classList.remove("hover:bg-gray-900");
+          btnWush.classList.add("bg-red-900");
+          btnWush.textContent = "Wrong my friend";
+          btnWush.style.animation = "shake 0.5s ease-in-out forwards";
+          btnWush.removeAttribute("href");
+        } else {
+          btnWush.classList.add("bg-gray-800");
+          btnWush.classList.add("hover:bg-gray-900");
+          btnWush.classList.remove("bg-red-900");
+          btnWush.style.animation = "bounce 0.5s ease-in-out forwards";
+          btnWush.textContent = "Wush";
+          btnWush.href = "greeting.html";
+        }
+      }
+
+      inputField.addEventListener("input", showHint);
+      inputField.addEventListener("input", checkValue);
+    </script>
+  </body>
+</html>
+
+<style>
+  #hint-item {
+    display: none;
+  }
+
+  .box-content,
+  #hint-text span {
+    opacity: 0;
+    animation: fadeInElement 0.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeInElement {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-8px);
+    }
+    50% {
+      transform: translateX(8px);
+    }
+    75% {
+      transform: translateX(-8px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #heading,
+  #input-wrapper,
+  #btn-wrapper {
+    opacity: 0; /* Hide the elements initially */
+  }
+
+  #heading {
+    animation: slideInFromTop 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  #input-wrapper {
+    animation: slideInFromTop 0.7s ease-in-out forwards;
+    animation-delay: 0.7s;
+  }
+
+  #btn-wrapper {
+    animation: slideInFromTop 0.7s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+</style>

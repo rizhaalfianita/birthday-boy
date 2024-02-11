@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racist Boy | Birthday</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="relative isolate h-screen w-screen overflow-hidden px-20 py-20 sm:p-20 lg:overflow-visible lg:px-20 lg:pt-20 md:pt-20"
+    >
+      <h1 class="text-5xl md:text-6xl lg:text-6xl font-bold text-gray-900 mb-6">
+        <span class="heading-greeting"></span>
+      </h1>
+      <h4
+        id="subtitle1-greeting"
+        class="text text-4xl md:text-6xl lg:text-5xl font-light text-gray-800 mb-6"
+      >
+        Thank you for coming, <span class="font-bold">Rendra</span>
+      </h4>
+      <h4
+        id="subtitle2-greeting"
+        class="text text-4xl md:text-6xl lg:text-5xl font-light text-gray-800 mb-6"
+      >
+        Let's sail this racist land together :v
+      </h4>
+      <div id="image-greeting" class="absolute bottom-0 right-0">
+        <img
+          src="../assets/images/leadership.png"
+          class="object-contain max-w-full max-h-full"
+          alt="Leadership Image"
+        />
+      </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".heading-greeting", {
+        strings: ["Hello Mellow!"],
+        typeSpeed: 150,
+        loopSpeed: 150,
+        looped: true,
+      });
+
+      const image = document.getElementById("image-greeting");
+
+      setTimeout(() => {
+        image.addEventListener("animationend", () => {
+          // Redirect to another page
+          window.location.href = "treasure.html"; // Replace 'https://example.com' with the URL of the page you want to redirect to
+        });
+      }, 5000);
+    </script>
+  </body>
+</html>
+
+<style>
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #subtitle1-greeting,
+  #subtitle2-greeting,
+  #image-greeting {
+    opacity: 0;
+  }
+
+  #subtitle1-greeting {
+    animation: slideInFromBottom 1s forwards;
+    animation-delay: 3s; /* Adjust delay as needed */
+  }
+
+  #subtitle2-greeting {
+    animation: slideInFromBottom 1s forwards;
+    animation-delay: 4s; /* Adjust delay as needed */
+  }
+
+  #image-greeting {
+    animation: slideInFromTop 1.5s ease-in-out forwards;
+    animation-delay: 5s;
+  }
+</style>

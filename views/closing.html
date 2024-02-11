@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racist Boy | Birthday</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="relative isolate h-screen w-screen px-20 py-20 sm:p-20 lg:overflow-x-hidden lg:px-20 lg:py-20 md:py-20"
+      id="chat-container"
+    >
+      <h2
+        class="closing-text text-4xl leading-relaxed text-gray-900 font-bold mb-8 sm:text-4xl lg:text-5xl md:text-5xl"
+      >
+        Happy <span class="text-blue-500">Racist Boy </span>Day
+      </h2>
+      <p
+        class="closing-desc text-3xl leading-relaxed text-gray-900 font-light mb-5 sm:text-3xl lg:text-4xl md:text-4xl"
+      >
+        Roses are red, violets are blue. A racist like you, should belongs in a
+        zoo
+      </p>
+      <div
+        class="grid lg:grid-cols-4 gap-4 sm:grid-cols-1 md:grid-cols-4 grid-cols-1 mt-14 pb-20"
+      >
+        <div class="img-grid h-96 opacity-0">
+          <img
+            src="../assets/images/picture-1.jpg"
+            class="object-cover w-full h-full"
+            alt=""
+          />
+        </div>
+        <div class="img-grid h-96 opacity-0">
+          <img
+            src="../assets/images/picture-2.jpg"
+            class="object-cover w-full h-full"
+            alt=""
+          />
+        </div>
+        <div class="img-grid h-96 opacity-0">
+          <img
+            src="../assets/images/picture-3.jpg"
+            class="object-cover w-full h-full"
+            alt=""
+          />
+        </div>
+        <div class="img-grid h-96 opacity-0">
+          <img
+            src="../assets/images/picture-4.jpg"
+            class="object-cover w-full h-full"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const itemGrids = document.querySelectorAll(".img-grid");
+
+      itemGrids.forEach((itemGrid, index) => {
+        setTimeout(() => {
+          itemGrid.classList.remove("opacity-0");
+        }, index * 700);
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .closing-text {
+    opacity: 0;
+    animation: slideInFromTop 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+  }
+
+  .closing-desc {
+    opacity: 0;
+    animation: slideInFromBottom 1.2s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+
+  .img-grid {
+    transition: opacity 0.7s ease-in-out;
+    transition-delay: 3s;
+  }
+</style>
