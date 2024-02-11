@@ -144,7 +144,7 @@ function showModal6() {
 }
 
 function nextpage() {
-  window.location.href = "../../views/chat.html";
+  window.location.href = "https://rizhaalfianita.github.io/birthday-boy/views/chat.html";
 }
 
 function showModal7() {
