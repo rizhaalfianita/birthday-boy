@@ -143,10 +143,6 @@ function showModal6() {
   modal.classList.remove("hidden");
 }
 
-function nextpage() {
-  window.location.href = "https://rizhaalfianita.github.io/birthday-boy/views/chat.html";
-}
-
 function showModal7() {
   const modal = document.querySelector(".modal-7");
   const titleModal = document.querySelector(".title-modal-7");

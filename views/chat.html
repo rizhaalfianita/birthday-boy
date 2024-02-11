@@ -19,21 +19,21 @@
       <div class="max-w-xl mx-auto">
         <button
           class="animate-bounce fixed right-10 bottom-10 p-0 w-12 h-12 bg-blue-500 rounded-full hover:bg-blue-400 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none"
-          onclick="movepage()"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 26 26"
-            stroke-width="1.5"
-            class="w-6 h-6 stroke-white mx-3.5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
-            />
-          </svg>
+          <a href="closing.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 26 26"
+              stroke-width="1.5"
+              class="w-6 h-6 stroke-white mx-3.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+              /></svg
+          ></a>
         </button>
         <div class="item-chat flex items-start gap-2.5 mb-5 opacity-0">
           <img
@@ -231,11 +231,6 @@
         itemChat.classList.remove("opacity-0");
       }, index * 2000);
     });
-
-    function movepage() {
-      window.location.href =
-        "https://rizhaalfianita.github.io/birthday-boy/closing.html";
-    }
   </script>
 </html>
 
