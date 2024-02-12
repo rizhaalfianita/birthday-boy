@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
@@ -22,7 +22,7 @@
         Happy <span class="text-blue-500">Racist Boy </span>Day
       </h2>
       <p
-        class="closing-desc text-3xl leading-relaxed text-gray-900 font-light mb-5 sm:text-3xl lg:text-4xl md:text-4xl"
+        class="closing-desc text-2xl leading-relaxed text-gray-900 font-light mb-5 sm:text-2xl lg:text-4xl md:text-4xl"
       >
         Roses are red, violets are blue. A racist like you, should belongs in a
         zoo
@@ -61,6 +61,10 @@
       </div>
     </div>
 
+    <canvas id="my-canvas"></canvas>
+
+    <script src="../assets/scripts/index.min.js"></script>
+
     <script>
       const itemGrids = document.querySelectorAll(".img-grid");
 
@@ -69,6 +73,10 @@
           itemGrid.classList.remove("opacity-0");
         }, index * 700);
       });
+
+      var confettiSettings = { target: "my-canvas" };
+      var confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
     </script>
   </body>
 </html>
@@ -111,5 +119,14 @@
   .img-grid {
     transition: opacity 0.7s ease-in-out;
     transition-delay: 3s;
+  }
+
+  #my-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
   }
 </style>

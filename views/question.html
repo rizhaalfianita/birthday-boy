@@ -79,14 +79,14 @@
         if (!inputValue.includes("rendra")) {
           btnWush.classList.remove("bg-gray-800");
           btnWush.classList.remove("hover:bg-gray-900");
-          btnWush.classList.add("bg-red-900");
+          btnWush.classList.add("bg-red-600");
           btnWush.textContent = "Wrong my friend";
           btnWush.style.animation = "shake 0.5s ease-in-out forwards";
           btnWush.removeAttribute("href");
         } else {
           btnWush.classList.add("bg-gray-800");
           btnWush.classList.add("hover:bg-gray-900");
-          btnWush.classList.remove("bg-red-900");
+          btnWush.classList.remove("bg-red-600");
           btnWush.style.animation = "bounce 0.5s ease-in-out forwards";
           btnWush.textContent = "Wush";
           btnWush.href = "greeting.html";
